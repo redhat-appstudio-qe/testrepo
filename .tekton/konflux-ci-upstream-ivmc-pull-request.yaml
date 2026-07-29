@@ -9,7 +9,7 @@ metadata:
     pipelinesascode.tekton.dev/cancel-in-progress: "true"
     pipelinesascode.tekton.dev/max-keep-runs: "3"
     pipelinesascode.tekton.dev/on-cel-expression: event == "pull_request" && target_branch
-      == "base-zukhli"
+      == "base-cyxmbz"
   labels:
     appstudio.openshift.io/application: konflux-ci-upstream-docker-build-oci-ta-min
     appstudio.openshift.io/component: konflux-ci-upstream-ivmc
@@ -250,7 +250,7 @@ spec:
         - name: name
           value: buildah-oci-ta-min
         - name: bundle
-          value: quay.io/konflux-ci/tekton-catalog/task-buildah-oci-ta-min:0.10@sha256:564357fc6cfbd9f613c4467d32e46c919c070845eb434ca39b541a0b616f162d
+          value: quay.io/konflux-ci/tekton-catalog/task-buildah-oci-ta-min:0.10.5@sha256:de644e1dee81463bd47e4e5a33688d4ef40cd963f0a17fccc9cf11ca92eea471
         - name: kind
           value: task
         resolver: bundles

@@ -8,13 +8,13 @@ metadata:
     pipelinesascode.tekton.dev/cancel-in-progress: "false"
     pipelinesascode.tekton.dev/max-keep-runs: "3"
     pipelinesascode.tekton.dev/on-cel-expression: event == "push" && target_branch
-      == "base-fodxkn"
+      == "base-hvfgma"
   labels:
     appstudio.openshift.io/application: konflux-ci-upstream-docker-build-oci-ta-min-pmem
     appstudio.openshift.io/component: konflux-ci-upstream-pmem
     pipelines.appstudio.openshift.io/type: build
   name: konflux-ci-upstream-pmem-on-push
-  namespace: default-tenant
+  namespace: user-ns1
 spec:
   params:
   - name: git-url
@@ -22,7 +22,7 @@ spec:
   - name: revision
     value: '{{revision}}'
   - name: output-image
-    value: quay.io/redhat-appstudio-qe/default-tenant/konflux-ci-upstream-pmem:{{revision}}
+    value: quay.io/redhat-appstudio-qe/user-ns1/konflux-ci-upstream-pmem:{{revision}}
   - name: dockerfile
     value: Dockerfile
   pipelineSpec:
